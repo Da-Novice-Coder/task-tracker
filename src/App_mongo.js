@@ -21,7 +21,7 @@ function App() {
 	const herokuapi = 'https://mytask-trackerapp.herokuapp.com/tasks';
 
 	const fechTasks = async () => {
-		const res = await fetch(`${herokuapi}/tasks`);
+		const res = await fetch(herokuapi);
 		const data = await res.json();
 		// console.log(data);
 		return data;
@@ -30,7 +30,7 @@ function App() {
 	// FetchTask
 
 	const fetchTask = async (id) => {
-		const res = await fetch(`${herokuapi}/tasks/${id}`);
+		const res = await fetch(`${herokuapi}/${id}`);
 		const data = await res.json();
 		// console.log(data);
 		return data;
@@ -39,7 +39,7 @@ function App() {
 	// Add Task
 
 	const addTask = async (task) => {
-		const res = await fetch(`${herokuapi}/tasks`, {
+		const res = await fetch(herokuapi, {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json',
@@ -59,7 +59,7 @@ function App() {
 	// Delete Task
 
 	const deleteTask = async (id) => {
-		await fetch(`${herokuapi}/tasks/${id}`, {
+		await fetch(`${herokuapi}/${id}`, {
 			method: 'DELETE',
 		});
 		setTask(tasks.filter((task) => task._id !== id));
@@ -73,7 +73,7 @@ function App() {
 		const taskToToggle = await fetchTask(id);
 		const updatedTask = { ...taskToToggle, reminder: !taskToToggle.reminder };
 
-		await fetch(`${herokuapi}/tasks/${id}`, {
+		await fetch(`${herokuapi}/${id}`, {
 			method: 'PATCH',
 			headers: {
 				'content-type': 'application/json',
