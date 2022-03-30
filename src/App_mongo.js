@@ -17,7 +17,7 @@ function App() {
 	}, []);
 
 	// FetchTasks
-	const localhost = 'http://localhost:5000';
+
 	const herokuapi = 'https://mytask-trackerapp.herokuapp.com/tasks';
 
 	const fechTasks = async () => {
