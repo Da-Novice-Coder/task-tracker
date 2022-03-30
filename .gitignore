@@ -26,4 +26,4 @@ yarn-error.log*
 firebase-config.js
 App.js
 snippet.js
-tasks.js
+tasks.json
