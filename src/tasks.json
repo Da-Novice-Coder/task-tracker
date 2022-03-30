@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "6241bdee30f8cad971e9f11c"
+  },
+  "text": "Cook Lunch",
+  "day": "Jan 1st at 12:00pm",
+  "reminder": false
+},{
+  "_id": {
+    "$oid": "6241be2c30f8cad971e9f121"
+  },
+  "text": "Wash Dishes",
+  "day": "Jan 1st at 1:00pm",
+  "reminder": true
+},{
+  "_id": {
+    "$oid": "6241be4030f8cad971e9f122"
+  },
+  "text": "wacth movies",
+  "day": "Jan 1st at 6:00pm",
+  "reminder": false
+},{
+  "_id": {
+    "$oid": "6241c53030f8cad971e9f123"
+  },
+  "text": "make beats",
+  "day": "Jan 1st at 2:00pm",
+  "reminder": true
+}]
